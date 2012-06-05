@@ -1,6 +1,5 @@
-simple-mvc-basket
-=================
-
+gorkana-test
+=========
 IMPLICIT CONVENTIONS:
 __ double underscore method prefixes denote private methods
 _ single underscore method prefixes denote protected methods
