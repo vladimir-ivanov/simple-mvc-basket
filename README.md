@@ -1,4 +1,4 @@
-gorkana-test
+Simple MVC Basket Without Frameworks
 =========
 IMPLICIT CONVENTIONS:
 __ double underscore method prefixes denote private methods
@@ -8,10 +8,8 @@ RUN:
 open index.html under gorkana-test root directory in a browser
 
 REQUIREMENTS:
-internet connection as both jQuery and QUnit are pulled in as CDN resources
-
-EXTERNAL LIBRARIES
-events.js is copied from Backbone.js library (slightly modified)
+1. No external libraries are allowed (including JQuery, underscore etc)
+2. Needs to support Firefox and Chrome browsers (latest versions)
 
 ASSUMPTIONS:
 1. The description is always unique (otherwise more complex logic to support multiple items with the same description is needed

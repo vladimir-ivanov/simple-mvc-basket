@@ -5,32 +5,31 @@
 /*globals
  $: false,
  window: false,
- jQuery: false,
+ Utils: false,
  */
-$(function ($) {
 
-    Gorkana.ItemCountView = function () {
-        this.__el = $('<div></div>');
-    };
 
-    Gorkana.ItemCountView.prototype = {
-        /**
-         * jQuery Elements for reference
-         */
-        __el: $(),
-        __counterEl: $('<span name ="itemsCounter">0</span>'),
+Global.ItemCountView = function () {
+    this.__el = Utils.makeDomEl('div');
+};
 
-        render: function () {
-            var counterWrapper = $('<div> items in list</div>');
+Global.ItemCountView.prototype = {
+    /**
+     * jQuery Elements for reference
+     */
+    __el: Utils.makeDomEl('div'),
+    __counterEl: Utils.makeDomEl('span', {'name': 'itemCounter'}, '0'),
 
-            counterWrapper.prepend(this.__counterEl);
-            this.__el.append(counterWrapper);
+    render: function () {
+        var counterWrapper = Utils.makeDomEl('div', {}, 'items in list: ');
 
-            return this.__el;
-        },
+        counterWrapper.appendChild(this.__counterEl);
+        this.__el.appendChild(counterWrapper);
 
-        updateCounter: function (count) {
-           this.__counterEl.html(count);
-        }
-    };
-});
+        return this.__el;
+    },
+
+    updateCounter: function (count) {
+        this.__counterEl.innerHTML = count;
+    }
+};

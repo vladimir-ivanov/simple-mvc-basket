@@ -5,10 +5,10 @@
 /*globals
  $: false,
  window: false,
- jQuery: false,
+ Utils: false,
  */
 // global namespace
-var Gorkana = {};
+var Global = {};
 /**
  * @desc any global config values go here
   */

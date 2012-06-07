@@ -5,10 +5,10 @@
 /*globals
  $: false,
  window: false,
- jQuery: false,
+ Utils: false,
  */
 
-$(document).ready(function () {
-    var controller = new Gorkana.BasketController();
+window.onload = function(){
+    var controller = new Global.BasketController();
     controller.run();
-});
+};
